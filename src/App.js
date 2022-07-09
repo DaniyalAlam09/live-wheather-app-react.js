@@ -1,13 +1,28 @@
 import "./App.css";
 import UilReact from "@iconscout/react-unicons/icons/uil-react";
 import Top from "./Components/Top";
+import Input from "./Components/Input";
+import CityTIme from "./Components/CityTIme";
+import TemperatureDetails from "./Components/TemperatureDetails";
+import Forecast from "./Components/Forecast";
+import getWeather from "./Services/Api";
 
 function App() {
-  return (
-    <div className="mx-auto max-w-screen-lg mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 shadow-xl shadow-gray-400">
-      <Top />
-    </div>
+  const fetchingData = async ()=>{
+    const data = await getWeather("weather", {q:"Lahore"})
 
+  }
+
+
+  return (
+    <div className="mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 shadow-xl shadow-gray-400">
+      <Top />
+      <Input />
+      <CityTIme />
+      <TemperatureDetails />
+      <Forecast time="Daily Forcast"/>
+      <Forecast time="Hurly Forcast"/>
+    </div>
   );
 }
 
