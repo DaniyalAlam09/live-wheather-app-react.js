@@ -9,7 +9,7 @@ import getFormattedWeather from "./Services/Api";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [query, setQuery] = useState({ q: "London" });
+  const [query, setQuery] = useState({ q: "Lahore" });
   const [unit, setUnit] = useState("metric");
   const [weather, setWeather] = useState(null);
 

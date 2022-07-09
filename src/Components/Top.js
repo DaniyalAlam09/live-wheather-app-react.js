@@ -2,7 +2,7 @@ import React from "react";
 
 function Top({ setQuery }) {
   const cities = [
-    { id: 1, name: "Lahore" },
+    { id: 1, name: "Sheikhupura" },
     { id: 2, name: "Karachi" },
     { id: 3, name: "Islamabad" },
     { id: 4, name: "Murree" },
