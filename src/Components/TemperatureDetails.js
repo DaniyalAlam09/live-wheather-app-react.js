@@ -4,6 +4,7 @@ import {
   UilWind,
   UilTear,
   UilTemperaturePlus,
+  UilSunset 
 } from "@iconscout/react-unicons";
 import {iconUrl} from "../Services/Api"
 import {formatLocalTime} from "../Services/Api"
@@ -60,7 +61,7 @@ function TemperatureDetails({
           Rise: <span className="font-md ml-1">{formatLocalTime(sunrise, timezone, "hh:mm a")}</span>
         </p>
         <p>|</p>
-        <UilSun />
+        <UilSunset />
         <p>
           Sunset: <span className="font-md ml-1">{formatLocalTime(sunset, timezone, "hh:mm a")}</span>
         </p>
