@@ -1,7 +1,7 @@
 import React from "react";
 import { UilSun } from "@iconscout/react-unicons";
 
-function Forecast({time}) {
+function Forecast({ time, items }) {
   return (
     <div>
       <div className="flex flex-row justify-start mt-6">
@@ -9,26 +9,13 @@ function Forecast({time}) {
       </div>
       <hr className="my-2" />
       <div className="flex flex-row items-center justify-between text-white">
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">4.30</p>
-          <UilSun className="w-12 my1 text-orange-500 text-2xl" />
-          <p className="font-medium">22</p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">4.30</p>
-          <UilSun className="w-12 my1 text-orange-500 text-2xl" />
-          <p className="font-medium">22</p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">4.30</p>
-          <UilSun className="w-12 my1 text-orange-500 text-2xl" />
-          <p className="font-medium">22</p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">4.30</p>
-          <UilSun className="w-12 my1 text-orange-500 text-2xl" />
-          <p className="font-medium">22</p>
-        </div>
+        {items.map((items) => (
+          <div className="flex flex-col items-center justify-center">
+            <p className="font-light text-sm">{items.title}</p>
+            <UilSun className="w-12 my1 text-orange-500 text-2xl" />
+            <p className="font-medium">{`${items.temp.toFixed()}°`}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

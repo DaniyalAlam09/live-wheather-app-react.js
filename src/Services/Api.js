@@ -77,13 +77,10 @@ const formatLocalTime = (
   secs,
   zone,
   format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
-) => {
-  DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
-};
+) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
 
-const iconUrl = (code) =>
-  `http://openweathermap.org/img/wn/${code}@2x.png`;
+const iconUrl = (code) => `http://openweathermap.org/img/wn/${code}@2x.png`;
 
 export default getFormattedWeather;
 
-export {formatLocalTime, iconUrl}
+export { formatLocalTime, iconUrl };
